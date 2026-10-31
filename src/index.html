@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Campus Bites – the university cafeteria. Fresh breakfast, fast food, main course meals and drinks every day.">
     <title>Home | Campus Bites</title>
     <link rel="stylesheet" href="../styles/style.css">
 </head>
@@ -25,24 +27,53 @@
 
     <main class="container">
         <!-- ===== HOME PAGE (Team Lead) ===== -->
+
+        <!-- Hero -->
         <section class="hero">
+            <p class="hero-badge">Open today &middot; 8:00 AM – 6:00 PM</p>
             <h1>Good food, between classes.</h1>
-            <p>Campus Bites is the university cafeteria serving fresh breakfast, fast food, main course meals and drinks
-                every day.</p>
-            <a class="btn" href="menu.html">See the menu</a>
+            <p class="hero-text">Campus Bites is the university cafeteria serving fresh breakfast, fast food, main
+                course meals and drinks every day.</p>
+            <div class="hero-actions">
+                <a class="btn" href="menu.html">See the menu</a>
+                <a class="btn btn-outline" href="deals.html">Today's deals</a>
+            </div>
         </section>
 
+        <!-- Quick facts -->
+        <section class="stats" aria-label="Campus Bites at a glance">
+            <div class="stat"><strong>4</strong><span>menu categories</span></div>
+            <div class="stat"><strong>30+</strong><span>items every day</span></div>
+            <div class="stat"><strong>10 min</strong><span>average wait</span></div>
+            <div class="stat"><strong>PKR 120</strong><span>meals from</span></div>
+        </section>
+
+        <!-- Today's special -->
+        <section class="special">
+            <div>
+                <h2>Today's special</h2>
+                <p class="special-name">Chicken Pulao with Raita</p>
+                <p>Slow-cooked rice, tender chicken and cool raita. Available until 3:00 PM or while stock lasts.</p>
+            </div>
+            <div class="special-price">
+                <span class="price">PKR 280</span>
+                <a class="btn" href="deals.html">View all deals</a>
+            </div>
+        </section>
+
+        <!-- Info cards -->
         <section class="grid">
             <article class="card">
                 <h2>Location</h2>
                 <p>Ground Floor, Main Academic Block, Campus Road.</p>
+                <p class="muted">Right next to the main library entrance.</p>
             </article>
             <article class="card">
                 <h2>Opening hours</h2>
-                <ul class="plain">
-                    <li>Monday – Friday: 8:00 AM – 6:00 PM</li>
-                    <li>Saturday: 9:00 AM – 2:00 PM</li>
-                    <li>Sunday: Closed</li>
+                <ul class="plain hours">
+                    <li><span>Monday – Friday</span><span>8:00 AM – 6:00 PM</span></li>
+                    <li><span>Saturday</span><span>9:00 AM – 2:00 PM</span></li>
+                    <li><span>Sunday</span><span>Closed</span></li>
                 </ul>
             </article>
             <article class="card">
@@ -54,6 +85,66 @@
                     <li><a href="feedback.html">Feedback &amp; contact</a></li>
                 </ul>
             </article>
+        </section>
+
+        <!-- Menu categories -->
+        <section>
+            <h2 class="section-title">What's on the menu</h2>
+            <div class="grid">
+                <a class="category" href="menu.html">
+                    <h3>Breakfast</h3>
+                    <p>Paratha, halwa puri and a hot cup of chai.</p>
+                </a>
+                <a class="category" href="menu.html">
+                    <h3>Fast Food</h3>
+                    <p>Burgers, sandwiches and crispy fries.</p>
+                </a>
+                <a class="category" href="menu.html">
+                    <h3>Main Course</h3>
+                    <p>Biryani, daal chawal and karahi.</p>
+                </a>
+                <a class="category" href="menu.html">
+                    <h3>Beverages &amp; Desserts</h3>
+                    <p>Mint margarita, cold coffee and gulab jamun.</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- How it works -->
+        <section>
+            <h2 class="section-title">Order in three steps</h2>
+            <ol class="mini-steps">
+                <li><strong>Choose</strong> from the menu or today's deals.</li>
+                <li><strong>Pay</strong> at the counter and take your token.</li>
+                <li><strong>Collect</strong> when your number is called.</li>
+            </ol>
+            <p><a href="order.html">Read the full ordering guide</a></p>
+        </section>
+
+        <!-- Student voices -->
+        <section>
+            <h2 class="section-title">What students say</h2>
+            <div class="grid">
+                <blockquote class="quote">
+                    <p>Biryani is always hot and the queue moves fast, even at lunch.</p>
+                    <cite>Ayesha, BS Computer Science</cite>
+                </blockquote>
+                <blockquote class="quote">
+                    <p>The student combo is the best deal on campus.</p>
+                    <cite>Hamza, BBA</cite>
+                </blockquote>
+                <blockquote class="quote">
+                    <p>Great chai between morning lectures. Staff are friendly too.</p>
+                    <cite>Sara, BS Psychology</cite>
+                </blockquote>
+            </div>
+        </section>
+
+        <!-- Call to action -->
+        <section class="cta">
+            <h2>Got a suggestion or a complaint?</h2>
+            <p>We read every message and use your feedback to improve the menu.</p>
+            <a class="btn btn-light" href="feedback.html">Share your feedback</a>
         </section>
     </main>
 
