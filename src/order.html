@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,6 +7,126 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>How to Order | Campus Bites</title>
     <link rel="stylesheet" href="../styles/style.css">
+
+    <style>
+        /* Order Page Improvements */
+
+        .page-title {
+            margin-bottom: 10px;
+        }
+
+        .lead {
+            margin-bottom: 35px;
+            line-height: 1.7;
+        }
+
+        .steps {
+            counter-reset: order-step;
+            list-style: none;
+            padding: 0;
+            margin: 30px 0 45px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
+        }
+
+        .steps li {
+            counter-increment: order-step;
+            position: relative;
+            padding: 25px 25px 25px 75px;
+            border-radius: 12px;
+            background: var(--card-bg, #fff);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            line-height: 1.7;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .steps li::before {
+            content: counter(order-step, decimal-leading-zero);
+            position: absolute;
+            left: 22px;
+            top: 25px;
+            width: 38px;
+            height: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            background: var(--primary-color, #eee);
+            color: inherit;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .steps li:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .steps li strong {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 17px;
+        }
+
+        .steps li a {
+            font-weight: 600;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 24px;
+            margin: 35px 0;
+        }
+
+        .grid .card {
+            padding: 28px;
+            border-radius: 14px;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .grid .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .grid .card h2 {
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 21px;
+        }
+
+        .grid .card p,
+        .grid .card li {
+            line-height: 1.8;
+        }
+
+        .grid .card ul {
+            padding-left: 20px;
+        }
+
+        @media (max-width: 650px) {
+            .steps,
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .steps li {
+                padding: 22px 20px 22px 70px;
+            }
+
+            .steps li::before {
+                left: 18px;
+                top: 22px;
+            }
+
+            .grid .card {
+                padding: 22px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -13,6 +134,7 @@
     <header class="site-header">
         <div class="container header-inner">
             <a class="brand" href="index.html">Campus Bites</a>
+
             <nav class="main-nav" aria-label="Main navigation">
                 <a href="index.html">Home</a>
                 <a href="menu.html">Menu</a>
@@ -24,23 +146,46 @@
     </header>
 
     <main class="container">
-        <!-- ===== ORDER PAGE (Member 3) ===== -->
+
         <h1 class="page-title">How to Order</h1>
-        <p class="lead">Ordering at Campus Bites takes four simple steps.</p>
+
+        <p class="lead">
+            Ordering at Campus Bites takes four simple steps.
+        </p>
 
         <ol class="steps">
-            <li><strong>Choose your items.</strong> Check the <a href="menu.html">menu</a> or today's <a
-                    href="deals.html">deals</a>.</li>
-            <li><strong>Pay at the counter.</strong> We accept cash and student card payments.</li>
-            <li><strong>Collect your token.</strong> Keep the token number safe.</li>
-            <li><strong>Pick up your order.</strong> Wait for your number to be called.</li>
+            <li>
+                <strong>Choose your items.</strong>
+                Check the <a href="menu.html">menu</a> or today's
+                <a href="deals.html">deals</a>.
+            </li>
+
+            <li>
+                <strong>Pay at the counter.</strong>
+                We accept cash and student card payments.
+            </li>
+
+            <li>
+                <strong>Collect your token.</strong>
+                Keep the token number safe.
+            </li>
+
+            <li>
+                <strong>Pick up your order.</strong>
+                Wait for your number to be called.
+            </li>
         </ol>
 
         <section class="grid">
+
             <article class="card">
                 <h2>Peak hours</h2>
-                <p>12:30 PM – 2:00 PM is our busiest time. Order before 12:30 PM to skip the queue.</p>
+                <p>
+                    12:30 PM – 2:00 PM is our busiest time.
+                    Order before 12:30 PM to skip the queue.
+                </p>
             </article>
+
             <article class="card">
                 <h2>Pick-up rules</h2>
                 <ul class="plain">
@@ -49,7 +194,9 @@
                     <li>Return trays to the rack after eating.</li>
                 </ul>
             </article>
+
         </section>
+
     </main>
 
     <footer class="site-footer">
@@ -59,5 +206,4 @@
     </footer>
 
 </body>
-
 </html>
