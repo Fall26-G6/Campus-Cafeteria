@@ -204,23 +204,270 @@ ul.plain li {
 
 /* ===== HOME PAGE (Team Lead) ===== */
 .hero {
-    padding: 2.5rem 0 1rem;
+    padding: 2.5rem 0 1.5rem;
 }
 
 .hero h1 {
-    font-size: 2.6rem;
-    margin: 0 0 .5rem;
+    font-size: 2.8rem;
+    margin: .5rem 0;
 }
 
-.hero p {
+.hero-text {
     max-width: 55ch;
     font-size: 1.15rem;
     color: var(--muted);
+    margin: 0 0 1.25rem;
+}
+
+.hero-badge {
+    display: inline-block;
+    margin: 0;
+    padding: .3rem .8rem;
+    background: #e4f1e9;
+    color: var(--green-dark);
+    border-radius: 999px;
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75rem;
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--green);
+    border: 2px solid var(--green);
+}
+
+.btn-outline:hover {
+    background: var(--green);
+    color: var(--white);
+}
+
+.btn-light {
+    background: var(--white);
+    color: var(--green-dark);
+}
+
+.btn-light:hover {
+    background: var(--mustard);
+    color: var(--ink);
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--white);
+    margin: 1.5rem 0;
+}
+
+.stat {
+    padding: 1.1rem;
+    text-align: center;
+    border-right: 1px solid var(--line);
+}
+
+.stat:last-child {
+    border-right: 0;
+}
+
+.stat strong {
+    display: block;
+    font-size: 1.6rem;
+    color: var(--green);
+}
+
+.stat span {
+    color: var(--muted);
+    font-size: .9rem;
+}
+
+.special {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem 2rem;
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-left: 6px solid var(--mustard);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.special h2 {
+    margin: 0 0 .25rem;
+}
+
+.special p {
+    margin: .25rem 0;
+}
+
+.special-name {
+    font-size: 1.35rem;
+    font-weight: 700;
+}
+
+.special-price {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .75rem;
+}
+
+.special-price .price {
+    font-size: 1.8rem;
+}
+
+.muted {
+    color: var(--muted);
+}
+
+.hours li {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    border-bottom: 1px dashed var(--line);
+}
+
+.hours li:last-child {
+    border-bottom: 0;
+}
+
+.section-title {
+    margin: 2.5rem 0 0;
+}
+
+.category {
+    display: block;
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 1.1rem;
+    text-decoration: none;
+    color: var(--ink);
+}
+
+.category h3 {
+    margin: 0 0 .25rem;
+}
+
+.category p {
+    margin: 0;
+    color: var(--muted);
+}
+
+.category:hover {
+    border-color: var(--green);
+    background: #f1f7f3;
+}
+
+.mini-steps {
+    counter-reset: s;
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+.mini-steps li {
+    counter-increment: s;
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.mini-steps li::before {
+    content: counter(s);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.8rem;
+    height: 1.8rem;
+    margin-bottom: .5rem;
+    border-radius: 50%;
+    background: var(--mustard);
+    color: var(--ink);
+    font-weight: 700;
+}
+
+.mini-steps strong {
+    display: block;
+}
+
+.quote {
+    margin: 0;
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 1.25rem;
+}
+
+.quote p {
+    margin: 0 0 .75rem;
+    font-style: italic;
+}
+
+.quote cite {
+    color: var(--muted);
+    font-size: .9rem;
+    font-style: normal;
+}
+
+.cta {
+    background: var(--green);
+    color: var(--white);
+    border-radius: 8px;
+    padding: 2rem;
+    margin-top: 2.5rem;
+    text-align: center;
+}
+
+.cta h2 {
+    color: var(--white);
+    margin-top: 0;
+}
+
+.cta p {
+    margin: 0 auto 1.25rem;
+    max-width: 50ch;
+    color: #d6e2da;
 }
 
 @media (max-width: 600px) {
     .hero h1 {
         font-size: 1.9rem;
+    }
+
+    .stat {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+    }
+
+    .stat:last-child {
+        border-bottom: 0;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .special {
+        padding: 1.1rem;
+    }
+
+    .cta {
+        padding: 1.5rem 1rem;
     }
 }
 
