@@ -332,6 +332,99 @@ ul.plain li {
     margin-top: 1rem;
 }
 
+/* Feedback Page – Additional UI/UX */
+
+.feedback-hero {
+    padding: 1rem 0 .5rem;
+}
+
+.feedback-hero .page-title {
+    margin-bottom: .5rem;
+}
+
+.feedback-hero .lead {
+    max-width: 650px;
+}
+
+.feedback-layout {
+    align-items: start;
+}
+
+.contact-card {
+    background: var(--white);
+    border-top: 5px solid var(--green);
+}
+
+.contact-card > p {
+    color: var(--muted);
+    margin-bottom: 1.5rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: .9rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.contact-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: var(--cream);
+    color: var(--green);
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.contact-item h3 {
+    margin: 0 0 .2rem;
+    font-size: 1rem;
+}
+
+.contact-item p {
+    margin: 0;
+    color: var(--muted);
+    overflow-wrap: anywhere;
+}
+
+.contact-message {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-left: 4px solid var(--mustard);
+    border-radius: 6px;
+    background: var(--cream);
+}
+
+.contact-message h3 {
+    margin: 0 0 .4rem;
+}
+
+.contact-message p {
+    margin: 0;
+    color: var(--muted);
+}
+
+@media (max-width: 600px) {
+    .feedback-hero {
+        padding-top: .5rem;
+    }
+
+    .contact-card,
+    .feedback-card {
+        padding: 1rem;
+    }
+
+    .contact-item {
+        gap: .7rem;
+    }
+}
+
+
 @media (max-width: 600px) {
     .feedback-form button {
         width: 100%;
