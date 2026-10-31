@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,9 +11,11 @@
 
 <body>
 
+    <!-- Header -->
     <header class="site-header">
         <div class="container header-inner">
             <a class="brand" href="index.html">Campus Bites</a>
+
             <nav class="main-nav" aria-label="Main navigation">
                 <a href="index.html">Home</a>
                 <a href="menu.html">Menu</a>
@@ -23,39 +26,196 @@
         </div>
     </header>
 
+    <!-- Main Content -->
     <main class="container">
-        <!-- ===== FEEDBACK PAGE (Member 4) ===== -->
-        <h1 class="page-title">Feedback &amp; Contact</h1>
 
-        <section class="grid">
-            <article class="card">
-                <h2>Contact us</h2>
-                <ul class="plain">
-                    <li><strong>Phone:</strong> 042-1234567</li>
-                    <li><strong>Email:</strong> info@campusbites.example</li>
-                    <li><strong>Address:</strong> Ground Floor, Main Academic Block</li>
-                </ul>
+        <section class="feedback-hero">
+            <h1 class="page-title">We Value Your Feedback</h1>
+            <p class="lead">
+                Your experience matters to us! Share your thoughts,
+                suggestions, and ideas to help us serve you better.
+            </p>
+        </section>
+
+        <section class="grid feedback-layout">
+
+            <!-- Contact Information -->
+            <article class="card contact-card">
+                <h2>Get in Touch</h2>
+
+                <p>
+                    Have a question or need assistance?
+                    Our team is always happy to help.
+                </p>
+
+                <div class="contact-item">
+                    <div class="contact-icon" aria-hidden="true">☎</div>
+                    <div>
+                        <h3>Phone</h3>
+                        <p>042-1294567</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon" aria-hidden="true">✉</div>
+                    <div>
+                        <h3>Email</h3>
+                        <p>info@campusbites.example</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon" aria-hidden="true">⌖</div>
+                    <div>
+                        <h3>Location</h3>
+                        <p>Ground Floor, Main Academic Block</p>
+                    </div>
+                </div>
+
+                <div class="contact-message">
+                    <h3>Your Opinion Matters!</h3>
+                    <p>
+                        Every suggestion helps us improve our food,
+                        service, and overall campus dining experience.
+                    </p>
+                </div>
             </article>
 
-            <article class="card">
-                <h2>Send feedback</h2>
-                <!-- Static form: no backend required -->
+            <!-- Feedback Form -->
+            <article class="card feedback-card">
+
+                <h2>Send Us Your Feedback</h2>
+
+                <p class="feedback-intro">
+                    Please complete the form below. Fields marked
+                    with * are required.
+                </p>
+
                 <form class="feedback-form" action="#" method="post">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
 
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Enter your full name"
+                            minlength="3"
+                            required
+                        >
+                    </div>
 
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email address"
+                            required
+                        >
+                    </div>
 
-                    <button type="submit" class="btn">Send feedback</button>
+                    <div class="form-group">
+                        <label for="category">Feedback Category *</label>
+                        <select id="category" name="category" required>
+                            <option value="" disabled selected>
+                                Choose a category
+                            </option>
+                            <option value="food-quality">Food Quality</option>
+                            <option value="customer-service">Customer Service</option>
+                            <option value="order-delivery">Order & Delivery</option>
+                            <option value="prices-deals">Prices & Deals</option>
+                            <option value="website">Website Experience</option>
+                            <option value="suggestion">Suggestions</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="order-number">
+                            Order Number (Optional)
+                        </label>
+                        <input
+                            type="text"
+                            id="order-number"
+                            name="order-number"
+                            placeholder="Enter your order number"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label>Rate Your Experience *</label>
+
+                        <div class="rating-options">
+
+                            <label>
+                                <input type="radio" name="rating" value="5" required>
+                                <span>★★★★★</span>
+                                <small>Excellent</small>
+                            </label>
+
+                            <label>
+                                <input type="radio" name="rating" value="4">
+                                <span>★★★★</span>
+                                <small>Very Good</small>
+                            </label>
+
+                            <label>
+                                <input type="radio" name="rating" value="3">
+                                <span>★★★</span>
+                                <small>Good</small>
+                            </label>
+
+                            <label>
+                                <input type="radio" name="rating" value="2">
+                                <span>★★</span>
+                                <small>Fair</small>
+                            </label>
+
+                            <label>
+                                <input type="radio" name="rating" value="1">
+                                <span>★</span>
+                                <small>Poor</small>
+                            </label>
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Your Message *</label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="5"
+                            minlength="10"
+                            placeholder="Tell us about your experience or share your suggestions..."
+                            required
+                        ></textarea>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn submit-btn">
+                            Submit Feedback
+                        </button>
+
+                        <button type="reset" class="btn reset-btn">
+                            Clear Form
+                        </button>
+                    </div>
+
+                    <p class="form-note">
+                        Thank you for helping Campus Bites serve you better!
+                    </p>
+
                 </form>
             </article>
+
         </section>
+
     </main>
 
+    <!-- Footer -->
     <footer class="site-footer">
         <div class="container">
             <p>&copy; 2026 Campus Bites &middot; University of Central Punjab</p>
@@ -63,5 +223,4 @@
     </footer>
 
 </body>
-
 </html>
